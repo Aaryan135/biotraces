@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Biotraces</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assuming you're using the same CSS -->
+</head>
+
+<body>
+    <header class="header">
+        <img src="Biotraces logo.jpeg" alt="Biotraces Logo">
+
+        <nav>
+            <!-- Dropdown for Medicare -->
+            <div class="dropdown">
+                <button class="dropbtn">Medicare</button>
+                <div class="dropdown-content">
+                    <a href="#">Plan for Medicare</a>
+                    <a href="#">Sign up for Medicare</a>
+                    <a href="#">Request to lower IRMAA</a>
+                    <a href="#">Apply for Part D Extra Help</a>
+                    <a href="#">Manage Medicare benefits</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for Card & Record -->
+            <div class="dropdown">
+                <button class="dropbtn">Card & Record</button>
+                <div class="dropdown-content">
+                    <a href="#">Number & Card</a>
+                    <a href="#">Personal Record</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="index.html" id="signOutBtn" class="sign-in-btn dropbtn">Sign Out</a>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <h1>Welcome to Your Dashboard</h1>
+    
+        <div class="card-container">
+            <!-- Your Documents Section -->
+            <div class="card">
+                <h2>Your Documents</h2>
+                <ul>
+                    <li><a href="School.html" target="_blank"><button id="checkEligibilityBtn">School documents</button></a></li>
+                    <li><a href="Higherstudies.html" target="_blank"><button id="getBenefitsEstimateBtn">Higher studies document</button></a></li>
+                    <li><a href="Graduation.html" target="_blank"><button id="planForRetirementBtn">Graduation</button></a></li>
+                </ul>
+            </div>
+
+            <!-- Personal Records Section -->
+            <div class="card">
+                <h2>Personal Records</h2>
+                <ul>
+                    <li><a href="medical.html" target="_blank"><button id="applyForBenefitsBtn">Medical</button></a></li>
+                    <li><a href="banking.html" target="_blank"><button id="signUpMedicareBtn">Banking</button></a></li>
+                    <li><a href="insurance.html" target="_blank"><button id="applyForSSIBtn">Insurance</button></a></li>
+                </ul>
+            </div>
+
+            <!-- Medicare Section -->
+            <div class="card">
+               <h2>Past History</h2>
+                <ul>
+                    <li><a href="criminal record.html" target="_blank"><button id="checkStatusBtn">Criminal History</button></a></li>
+                    <li><a href="appeal-decision.html" target="_blank"><button id="appealDecisionBtn">Travel history</button></a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Biotraces. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+
+</html>

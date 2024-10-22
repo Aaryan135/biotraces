@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotraces</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="Biotraces logo.jpeg" alt="Biotraces Logo">
+
+        <nav>
+            <!-- Dropdown for education -->
+            <div class="dropdown">
+                <button class="dropbtn" id="benefitsDropdown">Education</button>
+                <div class="dropdown-content">
+                    <a href="#">Schooling</a>
+                    <a href="#">Higher Education</a>
+                    <a href="#">Certification</a> 
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="benefitsDropdown">Bank details </button>
+                <div class="dropdown-content">
+                    <a href="#">Bank details </a>
+                    <a href="#">Tax returns</a>
+                    <a href="#">Transaction history</a>
+                </div>
+            </div>
+            <!-- Dropdown for Medicare -->
+            <div class="dropdown">
+                <button class="dropbtn" id="medicareDropdown">Medicare</button>
+                <div class="dropdown-content">
+                    <a href="#">Plan for Medicare</a>
+                    <a href="#">Sign up for Medicare</a>
+                    <a href="#">Request to lower IRMAA</a>
+                    <a href="#">Apply for Part D Extra Help</a>
+                    <a href="#">Manage Medicare benefits</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for Card & Record -->
+            <div class="dropdown">
+                <button class="dropbtn" id="cardRecordDropdown">Card & Record</button>
+                <div class="dropdown-content">
+                    <a href="#">Number & Card</a>
+                    <a href="#">Personal Record</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="auth-buttons">
+            <div class="dropdown">
+                <button class="dropbtn" id="languageDropdown">Language</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="#" onclick="changeLanguage('pa')">ਪੰਜਾਬੀ</a>
+                    <a href="#" onclick="changeLanguage('te')">తెలుగు</a>
+                    <a href="#" onclick="changeLanguage('hi')">हिन्दी</a>
+                </div>
+            </div>
+            <a href="login.html" id="signInBtn" class="sign-in-btn dropbtn" onclick="openSignInModal()">Sign In</a>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <h1 id="mainTitle">Securing Your Today and Tomorrow</h1>
+        <div class="card-container">
+        
+    <!-- Apply Section -->
+            <div class="card">
+                <h2 id="applyTitle" style="text-align: center;"><a href="apply.html" target="_blank">Apply</a></h2>
+                <ul>
+                    <li><a href="apply-benefits.html" target="_blank"><button id="applyForBenefitsBtn">Sign up for education</button></a></li>
+                    <li><a href="sign-up-medicare.html" target="_blank"><button id="signUpMedicareBtn">Sign up for Medicare</button></a></li>
+                    <li><a href="apply-ssi.html" target="_blank"><button id="applyForSSIBtn">Sign up for bank </button></a></li>
+                </ul>
+            </div>
+
+            <!-- After You Apply Section -->
+            <div class="card">
+                <h2 id="afterTitle" style="text-align: center;"><a href="after.html" target="_blank">After you apply</a></h2>
+                <ul>
+                    <li><a href="check-status.html" target="_blank"><button id="checkStatusBtn">Check application or appeal status</button></a></li>
+                    <li><a href="appeal-decision.html" target="_blank"><button id="appealDecisionBtn">Appeal a decision we made</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footerText">© 2024 Biotraces. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    
+ 
+    
+    
+    <script>
+        function changeLanguage(lang) {
+            const translations = {
+                en: {
+                    mainTitle: "Securing your today and tomorrow",
+                    prepareTitle: "Prepare",
+                    applyTitle: "Apply",
+                    afterTitle: "After you apply",
+                    checkEligibility: "Check eligibility for benefits",
+                    getBenefitsEstimate: "Get a benefits estimate",
+                    planForRetirement: "Plan for retirement",
+                    applyForBenefits: "Apply for benefits",
+                    signUpForMedicare: "Sign up for Medicare",
+                    applyForSSI: "Apply for SSI",
+                    checkStatus: "Check application or appeal status",
+                    appealDecision: "Appeal a decision we made",
+                    benefitsDropdown: "Benefits",
+                    medicareDropdown: "Medicare",
+                    cardRecordDropdown: "Card & Record",
+                    languageDropdown: "Language",
+                    signInBtn: "Sign In",
+                    footerText: "© 2024 Biotraces. All rights reserved. | Privacy Policy | Terms of Service",
+                }, pa: {
+                    mainTitle: "ਤੁਹਾਡੇ ਅੱਜ ਅਤੇ ਕੱਲ੍ਹ ਦੀ ਸੁਰੱਖਿਆ ਕਰਨਾ",
+                    prepareTitle: "ਤਿਆਰ ਹੋਣਾ",
+                    applyTitle: "ਅਰਜ਼ੀ ਦੇਣਾ",
+                    afterTitle: "ਤੁਸੀਂ ਅਰਜ਼ੀ ਦੇਣ ਤੋਂ ਬਾਅਦ",
+                    checkEligibility: "ਲਾਭਾਂ ਲਈ ਯੋਗਤਾ ਦੀ ਜਾਂਚ ਕਰੋ",
+                    getBenefitsEstimate: "ਲਾਭਾਂ ਦੀ ਅੰਦਾਜ਼ਾ ਲਗਾਓ",
+                    planForRetirement: "ਰਿਟਾਇਰਮੈਂਟ ਦੀ ਯੋਜਨਾ ਬਣਾਓ",
+                    applyForBenefits: "ਲਾਭਾਂ ਲਈ ਅਰਜ਼ੀ ਦਿਓ",
+                    signUpForMedicare: "ਮੀਡੀਕੇਅਰ ਲਈ ਸਾਈਨ ਅਪ ਕਰੋ",
+                    applyForSSI: "SSI ਲਈ ਅਰਜ਼ੀ ਦਿਓ",
+                    checkStatus: "ਅਰਜ਼ੀ ਜਾਂ ਅਪੀਲ ਦੀ ਸਥਿਤੀ ਦੀ ਜਾਂਚ ਕਰੋ",
+                    appealDecision: "ਅਸੀਂ ਕੀਤੇ ਫੈਸਲੇ ਦੀ ਅਪੀਲ ਕਰੋ",
+                    benefitsDropdown: "ਲਾਭ",
+                    medicareDropdown: "ਮੀਡੀਕੇਅਰ",
+                    cardRecordDropdown: "ਕਾਰਡ & ਰਿਕਾਰਡ",
+                    languageDropdown: "ਭਾਸ਼ਾ",
+                    signInBtn: "ਸਾਈਨ ਇਨ",
+                    footerText: "© 2024 Biotraces. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ। | ਪ੍ਰਾਈਵੇਟ ਪਾਲਿਸੀ | ਸੇਵਾ ਦੇ ਸ਼ਰਤਾਂ",
+                },
+                te: {
+                    mainTitle: "మీ నేటి మరియు రేపు భద్రత",
+                    prepareTitle: "తయారు చేయండి",
+                    applyTitle: "అర్జీ చేయండి",
+                    afterTitle: "మీరు అర్జీ చేసిన తర్వాత",
+                    checkEligibility: "లాభాల అర్హతను తనిఖీ చేయండి",
+                    getBenefitsEstimate: "లాభాల అంచనా పొందండి",
+                    planForRetirement: "విరామవేతనం కోసం ప్రణాళిక చేయండి",
+                    applyForBenefits: "లాభాల కోసం దరఖాస్తు చేయండి",
+                    signUpForMedicare: "మెడికేర్‌లో సైన్ అప్ చేయండి",
+                    applyForSSI: "ఎస్ఎస్ఐ కోసం దరఖాస్తు చేయండి",
+                    checkStatus: "అప్లికేషన్ లేదా అప్పీల్ స్థితిని తనిఖీ చేయండి",
+                    appealDecision: "మేము తీసుకున్న నిర్ణయాన్ని అప్పీల్ చేయండి",
+                    benefitsDropdown: "లాభాలు",
+                    medicareDropdown: "మెడికేర్",
+                    cardRecordDropdown: "కార్డ్ & రికార్డ్",
+                    languageDropdown: "భాష",
+                    signInBtn: "సైన్ ఇన్",
+                    footerText: "© 2024 Biotraces. అన్ని హక్కులు రిజర్వు చేసాయి | ప్రైవసీ పాలసీ | సేవా షరతులు",
+                },
+                hi: {
+                    mainTitle: "आपके आज और कल की सुरक्षा",
+                    prepareTitle: "तैयार करें",
+                    applyTitle: "आवेदन करें",
+                    afterTitle: "आपके आवेदन के बाद",
+                    checkEligibility: "लाभों के लिए पात्रता जांचें",
+                    getBenefitsEstimate: "लाभों का अनुमान लगाएं",
+                    planForRetirement: "सेवानिवृत्ति की योजना बनाएं",
+                    applyForBenefits: "लाभों के लिए आवेदन करें",
+                    signUpForMedicare: "मेडिकेयर के लिए साइन अप करें",
+                    applyForSSI: "SSI के लिए आवेदन करें",
+                    checkStatus: "आवेदन या अपील की स्थिति जांचें",
+                    appealDecision: "हमारे द्वारा लिए गए निर्णय की अपील करें",
+                    benefitsDropdown: "लाभ",
+                    medicareDropdown: "मेडिकेयर",
+                    cardRecordDropdown: "कार्ड और रिकॉर्ड",
+                    languageDropdown: "भाषा",
+                    signInBtn: "साइन इन करें",
+                    footerText: "© 2024 Biotraces. सर्वाधिकार सुरक्षित। | गोपनीयता नीति | सेवा की शर्तें",
+                
+            }
+
+            
+
+                // Other translations...
+            };
+
+            const langData = translations[lang];
+            document.getElementById("mainTitle").innerText = langData.mainTitle;
+            document.getElementById("prepareTitle").innerText = langData.prepareTitle;
+            document.getElementById("applyTitle").innerText = langData.applyTitle;
+            document.getElementById("afterTitle").innerText = langData.afterTitle;
+
+            document.getElementById("checkEligibilityBtn").innerText = langData.checkEligibility;
+            document.getElementById("getBenefitsEstimateBtn").innerText = langData.getBenefitsEstimate;
+            document.getElementById("planForRetirementBtn").innerText = langData.planForRetirement;
+            document.getElementById("applyForBenefitsBtn").innerText = langData.applyForBenefits;
+            document.getElementById("signUpMedicareBtn").innerText = langData.signUpForMedicare;
+            document.getElementById("applyForSSIBtn").innerText = langData.applyForSSI;
+            document.getElementById("checkStatusBtn").innerText = langData.checkStatus;
+            document.getElementById("appealDecisionBtn").innerText = langData.appealDecision;
+
+            document.getElementById("benefitsDropdown").innerText = langData.benefitsDropdown;
+            document.getElementById("medicareDropdown").innerText = langData.medicareDropdown;
+            document.getElementById("cardRecordDropdown").innerText = langData.cardRecordDropdown;
+            document.getElementById("languageDropdown").innerText = langData.languageDropdown;
+            document.getElementById("signInBtn").innerText = langData.signInBtn;
+            document.getElementById("footerText").innerText = langData.footerText;
+        }
+
+        // Functions to open and close the Sign In modal
+        function openSignInModal() {
+            document.getElementById('signInModal').style.display = 'block';
+        }
+
+        function closeSignInModal() {
+            document.getElementById('signInModal').style.display = 'none';
+        }
+
+        // Add a form submission handler
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // You can add your validation and authentication code here
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'correctUser' && password === 'correctPass') {
+                alert('Login successful!');
+                closeSignInModal();
+            } else {
+                document.getElementById('error-message').innerText = 'Invalid username or password';
+            }
+        });
+    </script>
+    <script src="app.js"></script>
+    <script src="login.js"></script>
+    </body>
+
+</html>
